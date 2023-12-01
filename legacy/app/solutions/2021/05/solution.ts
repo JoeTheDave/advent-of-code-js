@@ -69,13 +69,16 @@ export const findOverlappingCoords = (
   }
   let coordsCount = flatten(
     coords.map(coord => produceCoordinateSet(coord)),
-  ).reduce((counter, coord) => {
-    if (counter[coord]) {
-      counter[coord]++
-    } else {
-      counter[coord] = 1
-    }
-    return counter
-  }, {} as { [key: string]: number })
+  ).reduce(
+    (counter, coord) => {
+      if (counter[coord]) {
+        counter[coord]++
+      } else {
+        counter[coord] = 1
+      }
+      return counter
+    },
+    {} as { [key: string]: number },
+  )
   return Object.keys(coordsCount).filter(key => coordsCount[key] > 1).length
 }

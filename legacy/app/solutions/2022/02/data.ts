@@ -1,9 +1,5 @@
-export const testData = [
-  'A Y',
-  'B X',
-  'C Z',
-]
-  
+export const testData = ['A Y', 'B X', 'C Z']
+
 export const puzzleData = [
   'C Y',
   'A Z',
@@ -2506,4 +2502,3 @@ export const puzzleData = [
   'C Y',
   'B X',
 ]
-  

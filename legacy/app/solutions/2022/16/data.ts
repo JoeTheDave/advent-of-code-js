@@ -10,7 +10,7 @@ export const testData = [
   'Valve II has flow rate=0; tunnels lead to valves AA, JJ',
   'Valve JJ has flow rate=21; tunnel leads to valve II',
 ]
-  
+
 export const puzzleData = [
   'Valve XC has flow rate=0; tunnels lead to valves YK, AM',
   'Valve ME has flow rate=0; tunnels lead to valves UU, SX',
@@ -69,4 +69,3 @@ export const puzzleData = [
   'Valve UF has flow rate=0; tunnels lead to valves VC, FP',
   'Valve UU has flow rate=15; tunnels lead to valves QZ, IB, ME',
 ]
-  

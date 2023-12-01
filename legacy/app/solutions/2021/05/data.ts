@@ -10,7 +10,7 @@ export const testData = [
   '0,0 -> 8,8',
   '5,5 -> 8,2',
 ]
-  
+
 export const puzzleData = [
   '405,945 -> 780,945',
   '253,100 -> 954,801',
@@ -513,4 +513,3 @@ export const puzzleData = [
   '819,263 -> 328,754',
   '952,242 -> 178,242',
 ]
-  

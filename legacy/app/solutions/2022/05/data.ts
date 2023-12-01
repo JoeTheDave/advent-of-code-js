@@ -9,7 +9,7 @@ export const testData = [
   'move 2 from 2 to 1',
   'move 1 from 1 to 2',
 ]
-  
+
 export const puzzleData = [
   '[Q]         [N]             [N]    ',
   '[H]     [B] [D]             [S] [M]',
@@ -526,4 +526,3 @@ export const puzzleData = [
   'move 7 from 2 to 4',
   'move 5 from 2 to 6',
 ]
-  

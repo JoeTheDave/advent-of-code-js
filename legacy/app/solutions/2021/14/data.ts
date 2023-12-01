@@ -18,7 +18,7 @@ export const testData = [
   'CC -> N',
   'CN -> C',
 ]
-  
+
 export const puzzleData = [
   'CVKKFSSNNHNPSPPKBHPB',
   '',
@@ -123,4 +123,3 @@ export const puzzleData = [
   'NS -> V',
   'HK -> B',
 ]
-  

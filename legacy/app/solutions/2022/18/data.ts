@@ -13,7 +13,7 @@ export const testData = [
   '2,1,5',
   '2,3,5',
 ]
-  
+
 export const puzzleData = [
   '18,8,12',
   '9,1,10',
@@ -2863,4 +2863,3 @@ export const puzzleData = [
   '10,18,8',
   '12,6,8',
 ]
-  

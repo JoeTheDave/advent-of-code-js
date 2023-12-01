@@ -10,7 +10,7 @@ export const testData = [
   '4846848554',
   '5283751526',
 ]
-  
+
 export const puzzleData = [
   '7147713556',
   '6167733555',
@@ -23,4 +23,3 @@ export const puzzleData = [
   '7467115265',
   '1626573134',
 ]
-  

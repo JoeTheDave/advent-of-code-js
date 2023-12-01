@@ -5,7 +5,7 @@ export const testData = [
   'acctuvwj',
   'abdefghi',
 ]
-  
+
 export const puzzleData = [
   'abaccccccccccccccaaaccccaaaaaaaaaaaaaccccccaacccccccccccccccccccccccccccccaaaaaa',
   'abaaccaacccccccccaaaaaccccaaaaaaaaaaaaaccccaaacccccccccccccccccccccccccccccaaaaa',
@@ -49,4 +49,3 @@ export const puzzleData = [
   'abaaaaacaaaaccaaaaaaaaaaaaaaaaaaacccccccccccccccccccccccccccccccccccccccccaaaaaa',
   'abaaacccaaaaccccaaaccccaaaaaaaaaaacccccccccccccccccccccccccccccccccccccccccaaaaa',
 ]
-  

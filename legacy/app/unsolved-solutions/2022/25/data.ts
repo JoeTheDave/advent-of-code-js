@@ -13,7 +13,7 @@ export const testData = [
   '1=',
   '122',
 ]
-  
+
 export const puzzleData = [
   '2-==122-=11202',
   '1-0==',
@@ -125,4 +125,3 @@ export const puzzleData = [
   '1---=2-==',
   '1-=1--011',
 ]
-  

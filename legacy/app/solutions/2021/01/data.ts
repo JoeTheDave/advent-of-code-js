@@ -10,7 +10,7 @@ export const testData = [
   '260',
   '263',
 ]
-  
+
 export const puzzleData = [
   '137',
   '138',
@@ -2013,4 +2013,3 @@ export const puzzleData = [
   '10182',
   '10194',
 ]
-  

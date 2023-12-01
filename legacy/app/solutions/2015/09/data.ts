@@ -3,7 +3,7 @@ export const testData = [
   'London to Belfast = 518',
   'Dublin to Belfast = 141',
 ]
-  
+
 export const puzzleData = [
   'Faerun to Norrath = 129',
   'Faerun to Tristram = 58',
@@ -34,4 +34,3 @@ export const puzzleData = [
   'Snowdin to Straylight = 99',
   'Tambi to Straylight = 70',
 ]
-  

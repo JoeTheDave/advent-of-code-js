@@ -15,7 +15,7 @@ export const testData = [
   'drzm: hmdt - zczc',
   'hmdt: 32',
 ]
-  
+
 export const puzzleData = [
   'zsdb: gqzc + wrwl',
   'hlgq: tdbl + nhvq',
@@ -2417,4 +2417,3 @@ export const puzzleData = [
   'lhqd: pvww + jlqv',
   'lscj: llrg * mwmr',
 ]
-  

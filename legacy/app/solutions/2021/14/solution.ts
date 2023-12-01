@@ -42,11 +42,14 @@ export class PolymerAnalyzer {
 
   constructor(data: string[]) {
     const polymer = data[0]
-    this.operations = data.slice(2).reduce((opps, val) => {
-      const opp = val.split(' -> ')
-      opps[opp[0]] = opp[1]
-      return opps
-    }, {} as { [key: string]: string })
+    this.operations = data.slice(2).reduce(
+      (opps, val) => {
+        const opp = val.split(' -> ')
+        opps[opp[0]] = opp[1]
+        return opps
+      },
+      {} as { [key: string]: string },
+    )
 
     this.projections = Object.keys(this.operations).reduce(
       (projections, key) => {
@@ -58,10 +61,13 @@ export class PolymerAnalyzer {
       {} as { [key: string]: string[] },
     )
 
-    this.pairs = Object.keys(this.operations).reduce((pairs, key) => {
-      pairs[key] = 0
-      return pairs
-    }, {} as { [key: string]: number })
+    this.pairs = Object.keys(this.operations).reduce(
+      (pairs, key) => {
+        pairs[key] = 0
+        return pairs
+      },
+      {} as { [key: string]: number },
+    )
     for (let i = 0; i < polymer.length - 1; i++) {
       const segment = polymer.slice(i, i + 2)
       this.pairs[segment]++
@@ -72,10 +78,13 @@ export class PolymerAnalyzer {
         .map(key => `${key}${this.operations[key]}`)
         .join('')
         .split(''),
-    ).reduce((elements, element) => {
-      elements[element] = 0
-      return elements
-    }, {} as { [key: string]: number })
+    ).reduce(
+      (elements, element) => {
+        elements[element] = 0
+        return elements
+      },
+      {} as { [key: string]: number },
+    )
     polymer.split('').forEach(element => this.elements[element]++)
   }
 
@@ -83,14 +92,17 @@ export class PolymerAnalyzer {
     Object.keys(this.pairs).forEach(key => {
       this.elements[this.operations[key]] += this.pairs[key]
     })
-    this.pairs = Object.keys(this.pairs).reduce((pairCounts, key) => {
-      const pairProjections = this.projections[key]
-      pairCounts[pairProjections[0]] =
-        (pairCounts[pairProjections[0]] || 0) + this.pairs[key]
-      pairCounts[pairProjections[1]] =
-        (pairCounts[pairProjections[1]] || 0) + this.pairs[key]
-      return pairCounts
-    }, {} as { [key: string]: number })
+    this.pairs = Object.keys(this.pairs).reduce(
+      (pairCounts, key) => {
+        const pairProjections = this.projections[key]
+        pairCounts[pairProjections[0]] =
+          (pairCounts[pairProjections[0]] || 0) + this.pairs[key]
+        pairCounts[pairProjections[1]] =
+          (pairCounts[pairProjections[1]] || 0) + this.pairs[key]
+        return pairCounts
+      },
+      {} as { [key: string]: number },
+    )
   }
 
   calculatePolymerElementDifferencial() {

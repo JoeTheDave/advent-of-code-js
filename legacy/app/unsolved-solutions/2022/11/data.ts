@@ -27,7 +27,7 @@ export const testData = [
   '    If true: throw to monkey 0',
   '    If false: throw to monkey 1',
 ]
-  
+
 export const puzzleData = [
   'Monkey 0:',
   '  Starting items: 89, 74',
@@ -85,4 +85,3 @@ export const puzzleData = [
   '    If true: throw to monkey 5',
   '    If false: throw to monkey 4',
 ]
-  

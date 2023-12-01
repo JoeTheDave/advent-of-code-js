@@ -1,7 +1,5 @@
-export const testData = [
-  '',
-]
-  
+export const testData = ['']
+
 export const puzzleData = [
   'turn off 660,55 through 986,197',
   'turn off 341,304 through 638,850',
@@ -304,4 +302,3 @@ export const puzzleData = [
   'toggle 580,592 through 671,900',
   'toggle 296,687 through 906,775',
 ]
-  

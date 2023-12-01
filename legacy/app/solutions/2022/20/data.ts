@@ -1,13 +1,5 @@
-export const testData = [
-  '1',
-  '2',
-  '-3',
-  '3',
-  '-2',
-  '0',
-  '4',
-]
-  
+export const testData = ['1', '2', '-3', '3', '-2', '0', '4']
+
 export const puzzleData = [
   '-4241',
   '-7731',
@@ -5010,4 +5002,3 @@ export const puzzleData = [
   '-7337',
   '-1306',
 ]
-  

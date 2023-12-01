@@ -6,7 +6,7 @@ export const testData = [
   'down 8',
   'forward 2',
 ]
-  
+
 export const puzzleData = [
   'forward 4',
   'down 9',
@@ -1009,4 +1009,3 @@ export const puzzleData = [
   'down 7',
   'forward 2',
 ]
-  

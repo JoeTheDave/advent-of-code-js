@@ -12,7 +12,7 @@ export const testData = [
   '00010',
   '01010',
 ]
-  
+
 export const puzzleData = [
   '010100010111',
   '100100100110',
@@ -1015,4 +1015,3 @@ export const puzzleData = [
   '100100111001',
   '100010001111',
 ]
-  

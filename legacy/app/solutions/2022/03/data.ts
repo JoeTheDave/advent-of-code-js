@@ -6,7 +6,7 @@ export const testData = [
   'ttgJtRGJQctTZtZT',
   'CrZsJsPPZsGzwwsLwLmpwMDw',
 ]
-  
+
 export const puzzleData = [
   'FzQrhQpJtJMFzlpplrTWjTnTTrjVsVvvTnTs',
   'mScqSqqgcfPCqGPZcfGNSvTNsVVNSjNvWSNsNz',
@@ -309,4 +309,3 @@ export const puzzleData = [
   'tSdtjLHLQLHjdFdDddQSQhwlsGqwQlqqqhQsPhGc',
   'tbRjtTLFRvTZDBrMrV',
 ]
-  

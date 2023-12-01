@@ -8,7 +8,7 @@ export const testData = [
   'NOT x -> h',
   'NOT y -> i',
 ]
-  
+
 export const puzzleData = [
   'NOT dq -> dr',
   'kg OR kf -> kh',
@@ -350,4 +350,3 @@ export const puzzleData = [
   'fo RSHIFT 3 -> fq',
   'he RSHIFT 2 -> hf',
 ]
-  

@@ -34,12 +34,15 @@ const part2 = (data: string[]) => {
       propagateBasinId(gridSquare)
     }
   })
-  const basinInfo = gridSquares.reduce((basins, gridSquare) => {
-    if (gridSquare.basinId !== null) {
-      basins[gridSquare.basinId] = (basins[gridSquare.basinId] || 0) + 1
-    }
-    return basins
-  }, {} as { [key: number]: number })
+  const basinInfo = gridSquares.reduce(
+    (basins, gridSquare) => {
+      if (gridSquare.basinId !== null) {
+        basins[gridSquare.basinId] = (basins[gridSquare.basinId] || 0) + 1
+      }
+      return basins
+    },
+    {} as { [key: number]: number },
+  )
 
   return (Object.values(basinInfo) as number[])
     .sort((a, b) => a - b)

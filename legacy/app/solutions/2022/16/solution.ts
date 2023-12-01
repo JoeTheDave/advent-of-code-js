@@ -66,10 +66,13 @@ export const generateValveNetwork = (data: string[]) => {
     })
   })
   valveNetork.forEach(valve => {
-    valve.paths = valve.connections.reduce((paths, connection) => {
-      paths[connection.id] = [connection.id]
-      return paths
-    }, {} as { [key: string]: string[] })
+    valve.paths = valve.connections.reduce(
+      (paths, connection) => {
+        paths[connection.id] = [connection.id]
+        return paths
+      },
+      {} as { [key: string]: string[] },
+    )
 
     for (let i = 0; true; i++) {
       let breakCondition = true
