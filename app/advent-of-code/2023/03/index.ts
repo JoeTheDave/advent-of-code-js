@@ -1,7 +1,7 @@
 import data from './data'
 import { solutionOne, solutionTwo } from './solution'
 
-// Year 2023 | Day 1 | Trebuchet?!
+// Year 2023 | Day 3 | Gear Ratios
 
 console.log(data)
 

@@ -1,18 +1,12 @@
-import data, { testData } from './data'
+import data from './data'
+import { solutionOne, solutionTwo } from './solution'
 
-console.log(testData)
+// Year 2023 | Day 4 | Scratchcards
+
 console.log(data)
 
-const solutionOne = () => {
-  return null
-}
-
-const solutionTwo = () => {
-  return null
-}
-
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
+  <div class="font-mono text-[24px]">
     <div id="solution-one">
       ${solutionOne()}
     </div>

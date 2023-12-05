@@ -3,11 +3,10 @@ import typescriptLogo from './typescript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.ts'
 
-const url = window.location.pathname
-
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
-    <span>${url}</span>
+
+    <div class="border p-4">This is some text</div>
 
     <div class="card">
       <button id="counter" type="button"></button>
