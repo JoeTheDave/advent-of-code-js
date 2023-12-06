@@ -62,7 +62,7 @@ if (project === 'aoc') {
           generateIndexFile(fileData)
           generateDataFile(fileData)
           generateHtmlFile(fileData)
-          setTimeout(db.getAdventData, 500)
+          setTimeout(db.updateAdventData, 500)
         })
         .catch(() => {
           throw 'Invalid day requested'

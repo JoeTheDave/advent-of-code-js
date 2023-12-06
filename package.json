@@ -12,7 +12,9 @@
     "preview": "vite preview",
     "tailwind": "npx tailwindcss -i ./lib/styles/index.css -o ./lib/styles/tailwind.css",
     "exec": "esno ./scripts/exec.ts",
-    "generate": "esno ./scripts/generate.ts"
+    "generate": "esno ./scripts/generate.ts",
+    "update-stars": "esno ./scripts/update-stars.ts",
+    "delete": "esno ./scripts/delete.ts"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.202",

@@ -20,7 +20,6 @@ You can obtain your https://adventofcode.com/ session cookie value from chrome d
 
 ### TODO
 
-- [ ] Add Delete script to delete a day both from /app and from /lib/appData.json
 - [ ] Add DeleteAll script to delete all content in /app and the appData.json for use by those who fork
 - [ ] Migrate all legacy solutions into new project
 - [ ] Add https://popmotion.io/pure/

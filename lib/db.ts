@@ -9,15 +9,19 @@ export interface AdventDayDetail {
 }
 
 export type AdventData = {
-  [key: number]: {
-    [key: number]: AdventDayDetail
+  [key: string]: {
+    [key: string]: AdventDayDetail
   }
 }
 
 const jsonFilePath = `${__dirname}/../lib/appData.json`
 const appPath = `${__dirname}/../app/advent-of-code`
 
-export const getAdventData = () => {
+const writeAdventData = (adventData: AdventData) => {
+  writeFileSync(jsonFilePath, JSON.stringify(adventData, null, 2))
+}
+
+const getAdventData = () => {
   if (!existsSync(jsonFilePath)) {
     writeFileSync(jsonFilePath, JSON.stringify({}, null, 2))
   }
@@ -41,15 +45,30 @@ export const getAdventData = () => {
       if (existsSync(dataModulePath)) {
         data[year][day].generated = true
         const dynamicModule = require(dataModulePath)
-        console.log(dynamicModule)
         data[year][day].name = dynamicModule['adventTitle']
+      } else {
+        data[year][day].stars = 0
+        data[year][day].generated = false
+        data[year][day].name = ''
       }
     }
   }
-  writeFileSync(jsonFilePath, JSON.stringify(data, null, 2))
+  writeAdventData(data)
   return data
+}
+
+const updateAdventData = () => {
+  getAdventData()
+}
+
+const updateStars = (year: string, day: string, stars: number) => {
+  const data = getAdventData()
+  data[year][`${parseInt(day)}`].stars = stars
+  writeAdventData(data)
 }
 
 export default {
   getAdventData,
+  updateAdventData,
+  updateStars,
 }

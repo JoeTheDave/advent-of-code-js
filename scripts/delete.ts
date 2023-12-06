@@ -1,5 +1,6 @@
 import chalk from 'chalk'
-import { existsSync } from 'fs'
+import { existsSync, rmSync, readdirSync } from 'fs'
+import db from '../lib/db'
 
 const args = process.argv.splice(2)
 
@@ -17,19 +18,16 @@ if (project === 'aoc') {
       throw 'Advent of Code: A valid day must be provided'
     }
     const [year, day] = args
-    const modulePath = `${__dirname}/../app/advent-of-code/${year}/${day}/solution.ts`
-    if (existsSync(modulePath)) {
-      const dynamicModule = require(modulePath)
-      const solutionOne = dynamicModule['solutionOne']
-      const solutionTwo = dynamicModule['solutionTwo']
+    const yearPath = `${__dirname}/../app/advent-of-code/${year}`
+    const dayPath = `${yearPath}/${day}`
 
-      console.time(day)
-      const result = [solutionOne(), solutionTwo()]
-      console.timeEnd(day)
-      console.log(result)
-    } else {
-      throw `Advent of Code: No solution files exist for year - ${year}, day - ${day}`
+    if (existsSync(dayPath)) {
+      rmSync(dayPath, { recursive: true, force: true })
     }
+    if (readdirSync(yearPath).length === 0) {
+      rmSync(yearPath, { recursive: true, force: true })
+    }
+    db.updateAdventData()
   } catch (e) {
     console.log(chalk.greenBright(e))
   }
