@@ -1,3 +1,5 @@
+export const adventTitle = 'Gear Ratios'
+
 export const testData = [
   '467..114..',
   '...*......',

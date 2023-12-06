@@ -3,6 +3,7 @@ import chalk from 'chalk'
 import * as cheerio from 'cheerio'
 import dotenv from 'dotenv'
 import { existsSync, mkdirSync, writeFileSync } from 'fs'
+import db from '../lib/db'
 
 dotenv.config()
 
@@ -61,6 +62,7 @@ if (project === 'aoc') {
           generateIndexFile(fileData)
           generateDataFile(fileData)
           generateHtmlFile(fileData)
+          setTimeout(db.getAdventData, 500)
         })
         .catch(() => {
           throw 'Invalid day requested'
@@ -141,7 +143,9 @@ ${puzzleInput
   ]`
     : '[]'
 
-  const fileContent = `export const testData = []
+  const fileContent = `export const adventTitle = '${fileData.displayName}'
+
+export const testData = []
 
 const data = ${parsedInput}
 

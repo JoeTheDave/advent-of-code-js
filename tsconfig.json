@@ -19,5 +19,6 @@
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"]
+  "include": ["lib", "app"],
+  "exclude": ["legacy", "tsconfig.json"]
 }

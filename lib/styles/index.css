@@ -13,3 +13,12 @@ body,
 * {
   box-sizing: border-box;
 }
+
+.aoc-header-text {
+  color: #00cc00;
+  text-shadow: 0 0 2px #00cc00, 0 0 5px #00cc00;
+}
+
+.day-complete {
+  box-shadow: 0px 0px 8px 0px white;
+}
