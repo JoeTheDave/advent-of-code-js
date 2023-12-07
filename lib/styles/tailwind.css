@@ -540,6 +540,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -552,8 +556,20 @@ video {
   margin-top: -3px;
 }
 
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.contents {
+  display: contents;
 }
 
 .h-\[60px\] {

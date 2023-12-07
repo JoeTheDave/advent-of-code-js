@@ -23,3 +23,4 @@ You can obtain your https://adventofcode.com/ session cookie value from chrome d
 - [ ] Add DeleteAll script to delete all content in /app and the appData.json for use by those who fork
 - [ ] Migrate all legacy solutions into new project
 - [ ] Add https://popmotion.io/pure/
+- [ ] Add a warning flag to appData.js for each day that would show an icon for the day on the home page

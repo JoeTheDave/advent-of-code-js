@@ -1242,100 +1242,100 @@
     "1": {
       "year": 2022,
       "day": 1,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Calorie Counting"
     },
     "2": {
       "year": 2022,
       "day": 2,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Rock Paper Scissors"
     },
     "3": {
       "year": 2022,
       "day": 3,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Rucksack Reorganization"
     },
     "4": {
       "year": 2022,
       "day": 4,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Camp Cleanup"
     },
     "5": {
       "year": 2022,
       "day": 5,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Supply Stacks"
     },
     "6": {
       "year": 2022,
       "day": 6,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Tuning Trouble"
     },
     "7": {
       "year": 2022,
       "day": 7,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "No Space Left On Device"
     },
     "8": {
       "year": 2022,
       "day": 8,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Treetop Tree House"
     },
     "9": {
       "year": 2022,
       "day": 9,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Rope Bridge"
     },
     "10": {
       "year": 2022,
       "day": 10,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Cathode-Ray Tube"
     },
     "11": {
       "year": 2022,
       "day": 11,
       "stars": 0,
-      "generated": false,
-      "name": ""
+      "generated": true,
+      "name": "Monkey in the Middle"
     },
     "12": {
       "year": 2022,
       "day": 12,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Hill Climbing Algorithm"
     },
     "13": {
       "year": 2022,
       "day": 13,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Distress Signal"
     },
     "14": {
       "year": 2022,
       "day": 14,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Regolith Reservoir"
     },
     "15": {
       "year": 2022,
@@ -1347,9 +1347,9 @@
     "16": {
       "year": 2022,
       "day": 16,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Proboscidea Volcanium"
     },
     "17": {
       "year": 2022,
@@ -1361,37 +1361,37 @@
     "18": {
       "year": 2022,
       "day": 18,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Boiling Boulders"
     },
     "19": {
       "year": 2022,
       "day": 19,
       "stars": 0,
-      "generated": false,
-      "name": ""
+      "generated": true,
+      "name": "Not Enough Minerals"
     },
     "20": {
       "year": 2022,
       "day": 20,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Grove Positioning System"
     },
     "21": {
       "year": 2022,
       "day": 21,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Monkey Math"
     },
     "22": {
       "year": 2022,
       "day": 22,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 1,
+      "generated": true,
+      "name": "Monkey Map"
     },
     "23": {
       "year": 2022,
@@ -1410,9 +1410,9 @@
     "25": {
       "year": 2022,
       "day": 25,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 1,
+      "generated": true,
+      "name": "Full of Hot Air"
     }
   },
   "2023": {
