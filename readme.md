@@ -18,6 +18,32 @@ In the resulting .env file, you need to replace the value for `sessionId` with y
 You can obtain your https://adventofcode.com/ session cookie value from chrome dev tools Application tab
 ![image](https://user-images.githubusercontent.com/1302467/205341797-fe96b2b0-e9e6-4b7d-b7e5-717df446fe7f.png)
 
+## Scripts
+
+Generate solution files for a given year and day
+
+```
+npm run generate yyyy dd
+```
+
+Execute solutions and log return values to console along with running time
+
+```
+npm run exec
+```
+
+Update data file for completion of a given year and day (n is the star count, 0-2)
+
+```
+npm run update-stars yyyy dd n
+```
+
+Delete solution files for a given year and day (Be careful, this does not ask for verification)
+
+```
+npm run delete yyyy dd
+```
+
 ### TODO
 
 - [ ] Add DeleteAll script to delete all content in /app and the appData.json for use by those who fork

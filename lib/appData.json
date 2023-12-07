@@ -1065,107 +1065,107 @@
     "1": {
       "year": 2021,
       "day": 1,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Sonar Sweep"
     },
     "2": {
       "year": 2021,
       "day": 2,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Dive!"
     },
     "3": {
       "year": 2021,
       "day": 3,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Binary Diagnostic"
     },
     "4": {
       "year": 2021,
       "day": 4,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Giant Squid"
     },
     "5": {
       "year": 2021,
       "day": 5,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Hydrothermal Venture"
     },
     "6": {
       "year": 2021,
       "day": 6,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Lanternfish"
     },
     "7": {
       "year": 2021,
       "day": 7,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "The Treachery of Whales"
     },
     "8": {
       "year": 2021,
       "day": 8,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Seven Segment Search"
     },
     "9": {
       "year": 2021,
       "day": 9,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Smoke Basin"
     },
     "10": {
       "year": 2021,
       "day": 10,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Syntax Scoring"
     },
     "11": {
       "year": 2021,
       "day": 11,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Dumbo Octopus"
     },
     "12": {
       "year": 2021,
       "day": 12,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Passage Pathing"
     },
     "13": {
       "year": 2021,
       "day": 13,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Transparent Origami"
     },
     "14": {
       "year": 2021,
       "day": 14,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Extended Polymerization"
     },
     "15": {
       "year": 2021,
       "day": 15,
       "stars": 0,
-      "generated": false,
-      "name": ""
+      "generated": true,
+      "name": "Chiton"
     },
     "16": {
       "year": 2021,
@@ -1461,9 +1461,9 @@
     "7": {
       "year": 2023,
       "day": 7,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Camel Cards"
     },
     "8": {
       "year": 2023,
