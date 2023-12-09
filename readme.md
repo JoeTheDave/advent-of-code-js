@@ -44,6 +44,14 @@ Delete solution files for a given year and day (Be careful, this does not ask fo
 npm run delete yyyy dd
 ```
 
+## Debugging a solution
+
+Run the `Debug Terminal` configuration
+This will open up a new debug terminal
+Set breakpoints as needed
+run `npm run exec yyyy dd` to debug the solution file for the target day
+When finished, kill the debug terminal
+
 ### TODO
 
 - [ ] Add DeleteAll script to delete all content in /app and the appData.json for use by those who fork

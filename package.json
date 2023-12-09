@@ -17,13 +17,16 @@
     "delete": "esno ./scripts/delete.ts"
   },
   "devDependencies": {
+    "@types/jquery": "^3.5.29",
     "@types/lodash": "^4.14.202",
     "@types/node": "^20.10.1",
     "axios": "^1.6.2",
     "chalk": "^5.3.0",
     "cheerio": "^1.0.0-rc.12",
+    "daisyui": "^4.4.19",
     "dotenv": "^16.3.1",
     "esno": "^4.0.0",
+    "jquery": "^3.7.1",
     "lodash": "^4.17.21",
     "npm-run-all": "^4.1.5",
     "tailwindcss": "^3.3.6",

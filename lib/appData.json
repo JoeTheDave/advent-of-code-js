@@ -1163,7 +1163,7 @@
     "15": {
       "year": 2021,
       "day": 15,
-      "stars": 0,
+      "stars": 2,
       "generated": true,
       "name": "Chiton"
     },
@@ -1447,9 +1447,9 @@
     "5": {
       "year": 2023,
       "day": 5,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "If You Give A Seed A Fertilizer"
     },
     "6": {
       "year": 2023,
@@ -1468,16 +1468,16 @@
     "8": {
       "year": 2023,
       "day": 8,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 1,
+      "generated": true,
+      "name": "Haunted Wasteland"
     },
     "9": {
       "year": 2023,
       "day": 9,
       "stars": 0,
-      "generated": false,
-      "name": ""
+      "generated": true,
+      "name": "Mirage Maintenance"
     },
     "10": {
       "year": 2023,
