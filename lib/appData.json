@@ -1510,9 +1510,9 @@
     "14": {
       "year": 2023,
       "day": 14,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Parabolic Reflector Dish"
     },
     "15": {
       "year": 2023,
