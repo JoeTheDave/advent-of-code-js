@@ -21,11 +21,13 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
                   case 1:
                     progressClass.push('border-gray-300')
                     progressClass.push('text-gray-300')
+                    progressClass.push('bg-[#123]')
                     break
                   case 2:
                     progressClass.push('border-[#FFFF66]')
                     progressClass.push('text-white')
                     progressClass.push('day-complete')
+                    progressClass.push('bg-[#345]')
                     break
                   default:
                     progressClass.push('border-gray-600')

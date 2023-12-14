@@ -1,5 +1,5 @@
 import $ from 'jquery'
-import data from './data'
+import data, { testData } from './data'
 import { solutionOne, solutionTwo, Network } from './solution'
 
 // Year 2023 | Day 10 | Pipe Maze
@@ -11,16 +11,16 @@ $(() => {
     <div id="results"></div>
   `)
 
-  $('#results').html(`
-    <div class="font-mono text-[24px]">
-    <div id="solution-one">
-      ${solutionOne()}
-    </div>
-    <div id="solution-two">
-      ${solutionTwo()}
-    </div>
-  </div>
-  `)
+  // $('#results').html(`
+  //   <div class="font-mono text-[24px]">
+  //   <div id="solution-one">
+  //     ${solutionOne()}
+  //   </div>
+  //   <div id="solution-two">
+  //     ${solutionTwo()}
+  //   </div>
+  // </div>
+  // `)
 
   const content = data
     .map((dataRow, y) => {
@@ -37,7 +37,10 @@ $(() => {
   const pathNodes = pipeNetwork.network.filter(n => n.step !== null)
   pathNodes.forEach(n =>
     setTimeout(() => {
-      $(`#node-${n.x}-${n.y}`).css('color', 'red')
+      $(`#node-${n.x}-${n.y}`).css('color', 'yellow')
+      setTimeout(() => {
+        $(`#node-${n.x}-${n.y}`).css('color', 'red')
+      }, 5)
     }, (n.step || 0) * 10),
   )
 })

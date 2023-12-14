@@ -8,6 +8,20 @@ import data, { testData } from './data'
 
 // console.log(data)
 
+export class NodeCorner {
+  status: boolean | null
+  connectedCorners: NodeCorner[]
+
+  constructor() {
+    this.status = null
+    this.connectedCorners = []
+  }
+
+  propagateValue = () => {
+    this.connectedCorners.forEach(corner => (corner.status = this.status))
+  }
+}
+
 export class NetworkNode {
   nodeType: string
   x: number
@@ -18,6 +32,10 @@ export class NetworkNode {
   west: NetworkNode | null
   step: number | null
   connectionNodes: NetworkNode[]
+  ne: NodeCorner
+  se: NodeCorner
+  sw: NodeCorner
+  nw: NodeCorner
 
   constructor(coords: number[], nodeType: string) {
     const [x, y] = coords
@@ -30,11 +48,61 @@ export class NetworkNode {
     this.west = null
     this.step = null
     this.connectionNodes = []
+    this.ne = new NodeCorner()
+    this.se = new NodeCorner()
+    this.sw = new NodeCorner()
+    this.nw = new NodeCorner()
+    this.establishCornerAssociations()
+  }
+
+  getNeighboringNodes = () => compact([this.north, this.east, this.south, this.west])
+
+  associateCorners = (corners: NodeCorner[]) => {
+    for (let a = 0; a < corners.length - 1; a++) {
+      for (let b = a + 1; b < corners.length; b++) {
+        corners[a].connectedCorners.push(corners[b])
+        corners[b].connectedCorners.push(corners[a])
+      }
+    }
+  }
+
+  establishCornerAssociations = () => {
+    switch (this.nodeType) {
+      case '|':
+        this.associateCorners([this.ne, this.se])
+        this.associateCorners([this.nw, this.sw])
+        break
+      case '-':
+        this.associateCorners([this.nw, this.ne])
+        this.associateCorners([this.sw, this.se])
+        break
+      case 'L':
+        this.associateCorners([this.nw, this.sw, this.se])
+        break
+      case 'J':
+        this.associateCorners([this.ne, this.se, this.sw])
+        break
+      case '7':
+        this.associateCorners([this.nw, this.ne, this.se])
+        break
+      case 'F':
+        this.associateCorners([this.sw, this.nw, this.ne])
+        break
+      default:
+    }
+  }
+
+  determineNodeType = () => {
+    const connectedNorth = this.connectionNodes.includes(this.north as NetworkNode)
+    const connectedEast = this.connectionNodes.includes(this.east as NetworkNode)
+    const connectedSouth = this.connectionNodes.includes(this.south as NetworkNode)
+    const connectedWest = this.connectionNodes.includes(this.west as NetworkNode)
   }
 }
 
 export class Network {
   network: NetworkNode[]
+  startNode: NetworkNode
 
   constructor(dataMap: string[]) {
     this.network = []
@@ -81,12 +149,15 @@ export class Network {
           node.connectionNodes = []
       }
     })
+    this.startNode = this.network.find(n => n.nodeType === 'S') as NetworkNode
+    this.startNode.connectionNodes = this.startNode
+      .getNeighboringNodes()
+      .filter(n => n.connectionNodes.includes(this.startNode))
   }
 
   mapPath = () => {
-    const startNode = this.network.find(n => n.nodeType == 'S') as NetworkNode
-    startNode.step = 0
-    let leads = this.network.filter(n => n.connectionNodes.includes(startNode))
+    this.startNode.step = 0
+    let leads = this.network.filter(n => n.connectionNodes.includes(this.startNode))
     leads.forEach(lead => (lead.step = 1))
 
     do {
@@ -99,11 +170,11 @@ export class Network {
 }
 
 export const solutionOne = () => {
-  const network = new Network(data)
-  return network.mapPath()
+  const pipeNetwork = new Network(data)
+  return pipeNetwork.mapPath()
 }
 
 export const solutionTwo = () => {
-  const network = new Network(data)
-  return network.mapPath()
+  const pipeNetwork = new Network(data)
+  return pipeNetwork.mapPath()
 }

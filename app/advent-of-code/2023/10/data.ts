@@ -1,6 +1,17 @@
 export const adventTitle = 'Pipe Maze'
 
-export const testData = ['..F7.', '.FJ|.', 'SJ.L7', '|F--J', 'LJ...']
+export const testData = [
+  'FF7FSF7F7F7F7F7F---7',
+  'L|LJ||||||||||||F--J',
+  'FL-7LJLJ||||||LJL-77',
+  'F--JF--7||LJLJ7F7FJ-',
+  'L---JF-JLJ.||-FJLJJ7',
+  '|F|F-JF---7F7-L7L|7|',
+  '|FFJF7L7F-JF7|JL---7',
+  '7-L-JL7||F7|L7F-7F7|',
+  'L.L7LFJ|||||FJL7||LJ',
+  'L7JLJL-JLJLJL--JLJ.L',
+]
 
 const data = [
   '777FJ.F|-|FFF-L-J7.7.F-7--L-7-L-LF-7-FFF.FLF7.FL7-J77F-7.L7-7.-F77F|FLJ7.L---7.7---J77F|.F|-J7FFF|7-F7-77.FF7|-7-F77F-.J7.777FF|F|-F77|-77.F',

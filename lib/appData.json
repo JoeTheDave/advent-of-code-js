@@ -1496,16 +1496,16 @@
     "12": {
       "year": 2023,
       "day": 12,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 1,
+      "generated": true,
+      "name": "Hot Springs"
     },
     "13": {
       "year": 2023,
       "day": 13,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Point of Incidence"
     },
     "14": {
       "year": 2023,
