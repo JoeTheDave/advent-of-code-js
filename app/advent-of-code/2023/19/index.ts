@@ -1,8 +1,8 @@
 import $ from 'jquery'
-import data from './data'
+import data, { testData } from './data'
 import { solutionOne, solutionTwo } from './solution'
 
-// Year 2023 | Day 17 | Clumsy Crucible
+// Year 2023 | Day 19 | Aplenty
 
 $(() => {
   $('#app').html(`

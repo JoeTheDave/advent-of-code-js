@@ -42,8 +42,14 @@ if (project === 'aoc') {
         .then(response => {
           const html = response.data
           const $ = cheerio.load(html)
-          const displayName = $('h2').text().split(':')[1].replace(' ---', '').trim()
-          console.log(`Generating Solutions Files for: (Year: ${year} | Day: ${displayDay} | ${displayName})`)
+          const displayName = $('h2')
+            .text()
+            .split(':')[1]
+            .replace(' ---', '')
+            .trim()
+          console.log(
+            `Generating Solutions Files for: (Year: ${year} | Day: ${displayDay} | ${displayName})`,
+          )
           if (!existsSync(`${appPath}/${year}`)) {
             mkdirSync(`${appPath}/${year}`)
           }
@@ -76,7 +82,7 @@ if (project === 'aoc') {
 }
 
 const generateSolutionFile = (fileData: FileData) => {
-  const fileContent = `import data from './data'
+  const fileContent = `import data, { testData } from './data'
 
 // ${fileData.displayName}
 
@@ -95,14 +101,14 @@ export const solutionTwo = () => {
 }
 
 const generateIndexFile = (fileData: FileData) => {
-  const fileContent = `import data from './data'
+  const fileContent = `import $ from 'jquery'
+import data, { testData } from './data'
 import { solutionOne, solutionTwo } from './solution'
 
 // Year ${fileData.year} | Day ${fileData.day} | ${fileData.displayName}
 
-console.log(data)
-
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = \`
+$(() => {
+  $('#app').html(\`
   <div class="font-mono text-[24px]">
     <div id="solution-one">
       \${solutionOne()}
@@ -111,7 +117,8 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = \`
       \${solutionTwo()}
     </div>
   </div>
-\`
+  \`)
+})
 `
   writeFileSync(`${fileData.modulePath}/index.ts`, fileContent)
 }
@@ -127,7 +134,11 @@ const generateDataFile = (fileData: FileData) => {
       writeDataFile(fileData, data)
     })
     .catch(() => {
-      console.log(chalk.greenBright('Invalid or missing sessionId - Unable to retreive puzzle data.'))
+      console.log(
+        chalk.greenBright(
+          'Invalid or missing sessionId - Unable to retreive puzzle data.',
+        ),
+      )
       writeDataFile(fileData, '')
     })
 }
@@ -166,7 +177,9 @@ const generateHtmlFile = (fileData: FileData) => {
   </head>
   <body>
     <div id="app"></div>
-    <script type="module" src="/app/advent-of-code/${fileData.year}/${fileData.day.padStart(2, '0')}/index.ts"></script>
+    <script type="module" src="/app/advent-of-code/${
+      fileData.year
+    }/${fileData.day.padStart(2, '0')}/index.ts"></script>
   </body>
 </html>`
   writeFileSync(`${fileData.modulePath}/index.html`, fileContent)
