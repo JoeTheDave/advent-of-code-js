@@ -1553,15 +1553,15 @@
       "year": 2023,
       "day": 20,
       "stars": 0,
-      "generated": false,
-      "name": ""
+      "generated": true,
+      "name": "Pulse Propagation"
     },
     "21": {
       "year": 2023,
       "day": 21,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 1,
+      "generated": true,
+      "name": "Step Counter"
     },
     "22": {
       "year": 2023,
@@ -1574,15 +1574,15 @@
       "year": 2023,
       "day": 23,
       "stars": 0,
-      "generated": false,
-      "name": ""
+      "generated": true,
+      "name": "A Long Walk"
     },
     "24": {
       "year": 2023,
       "day": 24,
       "stars": 0,
-      "generated": false,
-      "name": ""
+      "generated": true,
+      "name": "Never Tell Me The Odds"
     },
     "25": {
       "year": 2023,
