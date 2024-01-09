@@ -3,23 +3,23 @@
     "1": {
       "year": 2015,
       "day": 1,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Not Quite Lisp"
     },
     "2": {
       "year": 2015,
       "day": 2,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "I Was Told There Would Be No Math"
     },
     "3": {
       "year": 2015,
       "day": 3,
-      "stars": 0,
-      "generated": false,
-      "name": ""
+      "stars": 2,
+      "generated": true,
+      "name": "Perfectly Spherical Houses in a Vacuum"
     },
     "4": {
       "year": 2015,
@@ -1586,6 +1586,183 @@
     },
     "25": {
       "year": 2023,
+      "day": 25,
+      "stars": 0,
+      "generated": false,
+      "name": ""
+    }
+  },
+  "2024": {
+    "1": {
+      "year": 2024,
+      "day": 1,
+      "stars": 0,
+      "generated": false,
+      "name": ""
+    },
+    "2": {
+      "year": 2024,
+      "day": 2,
+      "stars": 0,
+      "generated": false,
+      "name": ""
+    },
+    "3": {
+      "year": 2024,
+      "day": 3,
+      "stars": 0,
+      "generated": false,
+      "name": ""
+    },
+    "4": {
+      "year": 2024,
+      "day": 4,
+      "stars": 0,
+      "generated": false,
+      "name": ""
+    },
+    "5": {
+      "year": 2024,
+      "day": 5,
+      "stars": 0,
+      "generated": false,
+      "name": ""
+    },
+    "6": {
+      "year": 2024,
+      "day": 6,
+      "stars": 0,
+      "generated": false,
+      "name": ""
+    },
+    "7": {
+      "year": 2024,
+      "day": 7,
+      "stars": 0,
+      "generated": false,
+      "name": ""
+    },
+    "8": {
+      "year": 2024,
+      "day": 8,
+      "stars": 0,
+      "generated": false,
+      "name": ""
+    },
+    "9": {
+      "year": 2024,
+      "day": 9,
+      "stars": 0,
+      "generated": false,
+      "name": ""
+    },
+    "10": {
+      "year": 2024,
+      "day": 10,
+      "stars": 0,
+      "generated": false,
+      "name": ""
+    },
+    "11": {
+      "year": 2024,
+      "day": 11,
+      "stars": 0,
+      "generated": false,
+      "name": ""
+    },
+    "12": {
+      "year": 2024,
+      "day": 12,
+      "stars": 0,
+      "generated": false,
+      "name": ""
+    },
+    "13": {
+      "year": 2024,
+      "day": 13,
+      "stars": 0,
+      "generated": false,
+      "name": ""
+    },
+    "14": {
+      "year": 2024,
+      "day": 14,
+      "stars": 0,
+      "generated": false,
+      "name": ""
+    },
+    "15": {
+      "year": 2024,
+      "day": 15,
+      "stars": 0,
+      "generated": false,
+      "name": ""
+    },
+    "16": {
+      "year": 2024,
+      "day": 16,
+      "stars": 0,
+      "generated": false,
+      "name": ""
+    },
+    "17": {
+      "year": 2024,
+      "day": 17,
+      "stars": 0,
+      "generated": false,
+      "name": ""
+    },
+    "18": {
+      "year": 2024,
+      "day": 18,
+      "stars": 0,
+      "generated": false,
+      "name": ""
+    },
+    "19": {
+      "year": 2024,
+      "day": 19,
+      "stars": 0,
+      "generated": false,
+      "name": ""
+    },
+    "20": {
+      "year": 2024,
+      "day": 20,
+      "stars": 0,
+      "generated": false,
+      "name": ""
+    },
+    "21": {
+      "year": 2024,
+      "day": 21,
+      "stars": 0,
+      "generated": false,
+      "name": ""
+    },
+    "22": {
+      "year": 2024,
+      "day": 22,
+      "stars": 0,
+      "generated": false,
+      "name": ""
+    },
+    "23": {
+      "year": 2024,
+      "day": 23,
+      "stars": 0,
+      "generated": false,
+      "name": ""
+    },
+    "24": {
+      "year": 2024,
+      "day": 24,
+      "stars": 0,
+      "generated": false,
+      "name": ""
+    },
+    "25": {
+      "year": 2024,
       "day": 25,
       "stars": 0,
       "generated": false,
