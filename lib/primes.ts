@@ -8,16 +8,6 @@ export const isPrime = (num: number) => {
   return true
 }
 
-export const findFirstPrimeInRange = (start: number, end: number) => {
-  if (start > end) return null
-  for (let i = Math.max(start, 2); i <= end; i++) {
-    if (isPrime(i)) {
-      return i
-    }
-  }
-  return null
-}
-
 export const nextPrime = (num: number) => {
   if (num < 2) return 2
   num = num % 2 === 0 ? num + 1 : num + 2
