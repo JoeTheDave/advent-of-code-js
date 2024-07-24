@@ -1,10 +1,8 @@
 import _ from 'lodash'
 import { existsSync, writeFileSync } from 'fs'
-import { questions, FileData, generateSolutionDirectoryPath } from './common'
+import { questions, FileData, writeSolutionPathMemoryFile } from './common'
 
 const generateSolutionFile = (fileData: FileData) => {
-  console.log(fileData)
-  //const modulePath = generateSolutionDirectoryPath(fileData)
   if (existsSync(fileData.modulePath)) {
     if (fileData.project === 'aoc') {
       console.log(
@@ -34,6 +32,10 @@ ${
       : ``
   }
 
+export const displayName = '${_.upperCase(fileData.project)} | ${
+    fileData.project === 'aoc' ? `${fileData.year} | Day ${fileData.day}` : ''
+  }${fileData.project === 'euler' ? `Problem ${fileData.problem}` : ''}'
+
 export const complete = false
 
 const testData = []
@@ -44,14 +46,14 @@ const useTestData = true
 
 const data = useTestData ? testData : puzzleData
 
-export const solutionOne = () => {
-  console.log(data)
+export const solution${fileData.project === 'aoc' ? 'One' : ''} = () => {
+  return data
 }${
     fileData.project === 'aoc'
       ? `
   
 export const solutionTwo = () => {
-  console.log(data)
+  return data
 }`
       : ``
   }
@@ -60,6 +62,7 @@ export const solutionTwo = () => {
 
   try {
     writeFileSync(fileData.modulePath, fileContent)
+    writeSolutionPathMemoryFile(fileData.modulePath)
   } catch (e) {
     console.log('Unable to generate solution files.')
   }

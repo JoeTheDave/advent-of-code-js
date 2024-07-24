@@ -1,6 +1,6 @@
 import prompts from 'prompts'
 import _ from 'lodash'
-import { existsSync, mkdirSync } from 'fs'
+import { existsSync, mkdirSync, writeFileSync, readFileSync } from 'fs'
 
 export interface AocFileData {
   project: 'aoc'
@@ -18,6 +18,8 @@ export interface EulerFileData {
 export type FileData = AocFileData | EulerFileData
 
 export const solutionDirectoryPath = `${__dirname}/../solutions`
+
+export const solutionPathMemoryFile = `${__dirname}/.recent-exec`
 
 export const generateSolutionDirectoryPath = (fileData: FileData) => {
   if (!existsSync(solutionDirectoryPath)) {
@@ -53,6 +55,17 @@ export const generateSolutionDirectoryPath = (fileData: FileData) => {
     fileData.modulePath = `${eulerProblemDirectoryPath}/index.ts`
   }
   return fileData
+}
+
+export const writeSolutionPathMemoryFile = (path: string) => {
+  writeFileSync(solutionPathMemoryFile, path)
+}
+
+export const readSolutionPathMemoryFile = () => {
+  if (existsSync(solutionPathMemoryFile)) {
+    return readFileSync(solutionPathMemoryFile, 'utf8')
+  }
+  return ''
 }
 
 const askProjectType = async () => {
