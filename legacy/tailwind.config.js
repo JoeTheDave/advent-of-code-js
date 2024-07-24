@@ -1,15 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ['./app/**/*.{ts,tsx,jsx,js}'],
+export default {
+  content: ['./index.html', './lib/**/*.{ts,html}', './app/**/*.{ts,html}'],
   theme: {
-    extend: {
-      fontFamily: {
-        aoc: ["'Source Code Pro', monospace"],
-      },
-      textShadow: {
-        aoc: '0 0 2px #00cc00, 0 0 5px #00cc00',
-      },
-    },
+    extend: {},
   },
-  plugins: [require('tailwindcss-textshadow')],
+  plugins: [require('daisyui')],
 }
