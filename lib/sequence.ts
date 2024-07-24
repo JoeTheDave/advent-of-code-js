@@ -10,3 +10,9 @@ export const getFibonacciSequence = (max: number) => {
   }
   return fibonacci
 }
+
+export const isPalindrome = (term: string | number) => {
+  const termString = typeof term === 'string' ? term : `${term}`
+  const reversed = termString.split('').reverse().join('')
+  return termString === reversed
+}
