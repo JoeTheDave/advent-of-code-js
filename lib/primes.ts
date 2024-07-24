@@ -18,21 +18,27 @@ export const findFirstPrimeInRange = (start: number, end: number) => {
   return null
 }
 
+export const nextPrime = (num: number) => {
+  if (num < 2) return 2
+  num = num % 2 === 0 ? num + 1 : num + 2
+  while (!isPrime(num)) {
+    num += 2
+  }
+  return num
+}
+
 export const getPrimeFactors = (num: number) => {
   const factors: number[] = []
-  // Handle the factor 2 separately
   while (num % 2 === 0) {
     factors.push(2)
     num /= 2
   }
-  // Handle odd factors from 3 onwards
   for (let i = 3; i * i <= num; i += 2) {
     while (num % i === 0) {
       factors.push(i)
       num /= i
     }
   }
-  // If num is a prime number greater than 2
   if (num > 2) {
     factors.push(num)
   }
