@@ -13,6 +13,7 @@ const runSolution = async () => {
     // TODO: Using this questions function causes the path to be created, even when it doesn't already exist.
     // This results in an empty project directory if the user asks for one that hasn't already been created.
     // Better solution to build a line of questioning that will browse the directory structure.
+    // This can be done once we have a few solutions to browse through.
 
     const fileData = await questions()
     if (fileData) {
