@@ -13,3 +13,11 @@ export const sumOfFactors = (num: number) =>
   getFactors(num)
     .slice(0, -1)
     .reduce((sum, num) => sum + num, 0)
+
+export const factorial = (num: number) => {
+  let sum = '1'
+  for (let i = 1; i <= num; i++) {
+    sum = (BigInt(sum) * BigInt(i)).toString()
+  }
+  return sum
+}
