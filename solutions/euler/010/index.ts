@@ -3,8 +3,7 @@
 
 import { nextPrime } from '@/lib/primes'
 
-export const displayName = 'EULER | Problem 10 - Summation of Primes'
-
+export const displayName = 'EULER | Problem 10 | Summation of Primes'
 export const complete = true
 
 export const solution = () => {

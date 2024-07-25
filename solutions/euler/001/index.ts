@@ -1,8 +1,7 @@
 // Project Euler | Problem 1 | Multiples of 3 or 5
 // https://projecteuler.net/problem=1
 
-export const displayName = 'EULER | Problem 1 - Multiples of 3 or 5'
-
+export const displayName = 'EULER | Problem 1 | Multiples of 3 or 5'
 export const complete = true
 
 export const solution = () => {

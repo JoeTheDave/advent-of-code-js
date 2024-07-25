@@ -34,28 +34,38 @@ ${
 
 export const displayName = '${_.upperCase(fileData.project)} | ${
     fileData.project === 'aoc' ? `${fileData.year} | Day ${fileData.day}` : ''
-  }${fileData.project === 'euler' ? `Problem ${fileData.problem}` : ''}'
+  }${fileData.project === 'euler' ? `Problem ${fileData.problem} | ` : ''}'
+${
+  fileData.project === 'aoc'
+    ? `export const complete = false
 
-export const complete = false
+const testData: string[] = []
 
-const testData = []
-
-const puzzleData = []
+const puzzleData: string[] = []
 
 const useTestData = true
 
 const data = useTestData ? testData : puzzleData
 
-export const solution${fileData.project === 'aoc' ? 'One' : ''} = () => {
+export const solutionOne = () => {
   return data
-}${
-    fileData.project === 'aoc'
-      ? `
-  
+}
+
 export const solutionTwo = () => {
   return data
-}`
-      : ``
+}
+
+`
+    : ''
+}${
+    fileData.project === 'euler'
+      ? `export const complete = false
+
+export const solution = () => {
+  return null
+}
+`
+      : ''
   }
 
 `

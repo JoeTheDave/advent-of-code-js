@@ -10,4 +10,4 @@ https://projecteuler.net/archives
 - [ ] Test coverage?
 - [ ] Migrate all legacy solutions into new project
 - [ ] Better solution execution switcher script
-- [ ] Completion report?
+- [ ] Improved completion report?

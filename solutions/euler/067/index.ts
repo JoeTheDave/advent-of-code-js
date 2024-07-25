@@ -2,11 +2,9 @@
 // https://projecteuler.net/problem=67
 
 import { readFileSync } from 'fs'
-
 import { maximumPyramidPathSum } from '@/lib/algorithms'
 
-export const displayName = 'EULER | Problem 67 - Maximum Path Sum II'
-
+export const displayName = 'EULER | Problem 67 | Maximum Path Sum II'
 export const complete = true
 
 export const solution = () => {

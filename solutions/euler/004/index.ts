@@ -3,8 +3,7 @@
 
 import { isPalindrome } from '@/lib/sequence'
 
-export const displayName = 'EULER | Problem 4 - Largest Palindrome Product'
-
+export const displayName = 'EULER | Problem 4 | Largest Palindrome Product'
 export const complete = true
 
 export const solution = () => {

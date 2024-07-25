@@ -1,10 +1,7 @@
 // Project Euler | Problem 13 | Large Sum
 // https://projecteuler.net/problem=13
 
-import { add } from '@/lib/bigMath'
-
-export const displayName = 'EULER | Problem 13 - Large Sum'
-
+export const displayName = 'EULER | Problem 13 | Large Sum'
 export const complete = true
 
 const data = [
@@ -110,6 +107,11 @@ const data = [
   '53503534226472524250874054075591789781264330331690',
 ]
 
+// Note: In the past I have used my own large numbers math library to solve problems such as these. Using BigInt
+// seems a bit cheap, but it is a function of the language.
+
 export const solution = () => {
-  return data.reduce((sum, num) => add(sum, num), '0').substring(0, 10)
+  return data
+    .reduce((sum, num) => (BigInt(sum) + BigInt(num)).toString(), '0')
+    .substring(0, 10)
 }

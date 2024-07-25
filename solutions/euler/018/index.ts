@@ -4,7 +4,6 @@
 import { maximumPyramidPathSum } from '@/lib/algorithms'
 
 export const displayName = 'EULER | Problem 18 - Maximum Path Sum I'
-
 export const complete = true
 
 const data = [

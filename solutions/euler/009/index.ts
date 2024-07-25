@@ -1,8 +1,7 @@
 // Project Euler | Problem 9 | Special Pythagorean Triplet
 // https://projecteuler.net/problem=9
 
-export const displayName = 'EULER | Problem 9 - Special Pythagorean Triplet'
-
+export const displayName = 'EULER | Problem 9 | Special Pythagorean Triplet'
 export const complete = true
 
 export const solution = () => {

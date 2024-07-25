@@ -3,8 +3,7 @@
 
 import { getPrimeFactors } from '@/lib/primes'
 
-export const displayName = 'EULER | Problem 3 - Largest Prime Factor'
-
+export const displayName = 'EULER | Problem 3 | Largest Prime Factor'
 export const complete = true
 
 export const solution = () => {

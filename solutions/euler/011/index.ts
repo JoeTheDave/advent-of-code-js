@@ -1,8 +1,7 @@
-// Project Euler | Problem 11 | xxx Name xxx
+// Project Euler | Problem 11 | Largest Product in a Grid
 // https://projecteuler.net/problem=11
 
-export const displayName = 'EULER | Problem 11'
-
+export const displayName = 'EULER | Problem 11 | Largest Product in a Grid'
 export const complete = false
 
 const rawData = [
@@ -27,6 +26,11 @@ const rawData = [
   '20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54',
   '01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48',
 ]
+
+// Note: The commented out solution is, by my estimation, a cleaner solution. It, however, does not work at present.
+// It is currently returning an answer of 51267216 when 70600674 is expected.
+// The current working solution is from the first time I solved this problem. At present, I don't see what the
+// difference is between the old solution and the new one.
 
 export const solution = () => {
   const grid = rawData.map(row => row.split(' ').map(n => parseInt(n)))
@@ -84,6 +88,3 @@ export const solution = () => {
   })
   return largestProduct
 }
-
-// 70600674 - expected
-// 51267216 - actual

@@ -1,8 +1,7 @@
 // Project Euler | Problem 8 | Largest Product in a Series
 // https://projecteuler.net/problem=8
 
-export const displayName = 'EULER | Problem 8 - Largest Product in a Series'
-
+export const displayName = 'EULER | Problem 8 | Largest Product in a Series'
 export const complete = true
 
 const data = [

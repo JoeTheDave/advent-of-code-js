@@ -3,8 +3,7 @@
 
 import { nextPrime } from '@/lib/primes'
 
-export const displayName = 'EULER | Problem 7 - 10001st Prime'
-
+export const displayName = 'EULER | Problem 7 | 10001st Prime'
 export const complete = true
 
 export const solution = () => {

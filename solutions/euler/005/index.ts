@@ -3,8 +3,7 @@
 
 import { getPrimeFactors } from '@/lib/primes'
 
-export const displayName = 'EULER | Problem 5 - Smallest Multiple'
-
+export const displayName = 'EULER | Problem 5 | Smallest Multiple'
 export const complete = true
 
 const mergePrimeFactors = (

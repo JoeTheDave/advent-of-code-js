@@ -1,8 +1,7 @@
 // Project Euler | Problem 6 | Sum Square Difference
 // https://projecteuler.net/problem=6
 
-export const displayName = 'EULER | Problem 6 - Sum Square Difference'
-
+export const displayName = 'EULER | Problem 6 | Sum Square Difference'
 export const complete = true
 
 export const solution = () => {

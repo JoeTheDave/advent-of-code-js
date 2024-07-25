@@ -3,8 +3,7 @@
 
 import { getFibonacciSequence } from '@/lib/sequence'
 
-export const displayName = 'EULER | Problem 2 - Even Fibonacci Numbers'
-
+export const displayName = 'EULER | Problem 2 | Even Fibonacci Numbers'
 export const complete = true
 
 export const solution = () => {
