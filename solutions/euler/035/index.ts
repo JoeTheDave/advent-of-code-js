@@ -1,8 +1,10 @@
 // Project Euler | Problem 35 | Circular Primes
 // https://projecteuler.net/problem=35
 
+import { PrimeGenerator } from '@/lib/primes'
+
 export const displayName = 'EULER | Problem 35 | Circular Primes'
-export const complete = false
+export const complete = true
 
 const getNumericRotationsList = (n: number) => {
   const list = []
@@ -16,7 +18,7 @@ const getNumericRotationsList = (n: number) => {
 }
 
 export const solution = () => {
-  // const generator = new PrimeGenerator()
+  const generator = new PrimeGenerator()
   const resultList = []
   do {
     generator.getNext()

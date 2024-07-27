@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "exec": "esno ./scripts/exec.ts",
-    "exec-change": "esno ./scripts/exec.ts -c",
+    "change": "esno ./scripts/exec.ts -c",
     "create": "esno ./scripts/create.ts",
     "report": "esno ./scripts/report.ts",
     "delete-solutions": "rm -rf ./solutions"

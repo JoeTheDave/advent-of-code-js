@@ -2,7 +2,7 @@
 // https://projecteuler.net/problem=11
 
 export const displayName = 'EULER | Problem 11 | Largest Product in a Grid'
-export const complete = false
+export const complete = true
 
 const rawData = [
   '08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08',
@@ -27,63 +27,22 @@ const rawData = [
   '01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48',
 ]
 
-// Note: The commented out solution is, by my estimation, a cleaner solution. It, however, does not work at present.
-// It is currently returning an answer of 51267216 when 70600674 is expected.
-// The current working solution is from the first time I solved this problem. At present, I don't see what the
-// difference is between the old solution and the new one.
-
 export const solution = () => {
   const grid = rawData.map(row => row.split(' ').map(n => parseInt(n)))
-  // let maxProduct = 0
-  // for (let y = 0; y < grid.length; y++) {
-  //   for (let x = 0; x < grid[y].length; x++) {
-  //     let [vertProduct, horizProduct, diagProduct, diag2Product] = [1, 1, 1, 1]
-  //     for (let a = 0; a < 4; a++) {
-  //       if (y < grid.length - 3) {
-  //         // console.log(x, y)
-  //         vertProduct *= grid[y + a][x]
-  //       }
-  //       if (x < grid[y].length - 3) {
-  //         console.log(x, y)
-  //         horizProduct *= grid[y][x + a]
-  //       }
-  //       if (y < grid.length - 3 && x < grid[y].length - 3) {
-  //         // console.log(x, y)
-  //         diagProduct *= grid[y + a][x + a]
-  //         diag2Product *= grid[y + 3 - a][x + a]
-  //       }
-  //     }
-  //     maxProduct = Math.max(maxProduct, vertProduct, horizProduct, diagProduct)
-  //   }
-  // }
-  // return maxProduct
-
   let largestProduct = 0
   const data = grid.reduce((list, row) => [...list, ...row], [])
   data.forEach((_, i) => {
     if (i % 20 <= 16) {
-      largestProduct = Math.max(
-        largestProduct,
-        data[i] * data[i + 1] * data[i + 2] * data[i + 3],
-      )
+      largestProduct = Math.max(largestProduct, data[i] * data[i + 1] * data[i + 2] * data[i + 3])
     }
     if (i < 340) {
-      largestProduct = Math.max(
-        largestProduct,
-        data[i] * data[i + 20] * data[i + 40] * data[i + 60],
-      )
+      largestProduct = Math.max(largestProduct, data[i] * data[i + 20] * data[i + 40] * data[i + 60])
     }
     if (i % 20 <= 16 && i < 340) {
-      largestProduct = Math.max(
-        largestProduct,
-        data[i] * data[i + 21] * data[i + 42] * data[i + 63],
-      )
+      largestProduct = Math.max(largestProduct, data[i] * data[i + 21] * data[i + 42] * data[i + 63])
     }
     if (i % 20 <= 16 && i >= 60) {
-      largestProduct = Math.max(
-        largestProduct,
-        data[i] * data[i - 19] * data[i - 38] * data[i - 57],
-      )
+      largestProduct = Math.max(largestProduct, data[i] * data[i - 19] * data[i - 38] * data[i - 57])
     }
   })
   return largestProduct

@@ -1,22 +1,10 @@
 // Project Euler | Problem 32 | Pandigital Products
 // https://projecteuler.net/problem=32
 
+import { isPandigital } from '@/lib/analysis'
+
 export const displayName = 'EULER | Problem 32 | Pandigital Products'
 export const complete = true
-
-const isPandigital = (num: number | string) => {
-  const signature = `${num}`
-  let result = true
-  if (result) {
-    for (let i = 1; i <= signature.length; i++) {
-      if (!signature.includes(`${i}`)) {
-        result = false
-        break
-      }
-    }
-  }
-  return result
-}
 
 export const solution = () => {
   const products: { [key: number]: boolean } = {}
