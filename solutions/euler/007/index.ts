@@ -1,15 +1,15 @@
 // Project Euler | Problem 7 | 10001st Prime
 // https://projecteuler.net/problem=7
 
-import { PrimeGenerator } from '@/lib/primes'
+import { nextPrime } from '@/lib/primes'
 
 export const displayName = 'EULER | Problem 7 | 10001st Prime'
 export const complete = true
 
 export const solution = () => {
-  const generator = new PrimeGenerator()
+  let prime = 0
   for (let i = 1; i <= 10001; i++) {
-    generator.getNext()
+    prime = nextPrime(prime)
   }
-  return generator.getCurrent()
+  return prime
 }

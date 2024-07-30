@@ -1,12 +1,10 @@
 // Project Euler | Problem 27 | Quadratic Primes
 // https://projecteuler.net/problem=27
 
-import { PrimeGenerator } from '@/lib/primes'
+import { isPrime } from '@/lib/primes'
 
 export const displayName = 'EULER | Problem 27 | Quadratic Primes'
 export const complete = true
-
-const generator = new PrimeGenerator()
 
 const evaluateQuadraticCoefficients = (a: number, b: number) => {
   let n = -1
@@ -17,7 +15,7 @@ const evaluateQuadraticCoefficients = (a: number, b: number) => {
     if (result <= 1) {
       exitCondition = true
     }
-    if (!generator.isPrime(result)) {
+    if (!isPrime(result)) {
       exitCondition = true
     }
   } while (!exitCondition)
