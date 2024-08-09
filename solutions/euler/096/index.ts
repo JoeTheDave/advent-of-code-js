@@ -5,7 +5,7 @@ import { readFileSync } from 'fs'
 import { uniq, range, intersection } from 'lodash'
 import { getCombinations } from '@/lib/sequence'
 export const displayName = 'EULER | Problem 96 | Su Doku'
-export const complete = false
+export const complete = true
 
 const processRawData = (rawData: string) =>
   rawData
@@ -246,7 +246,6 @@ class Sudoku {
   }
 
   strategyHiddenSets = () => {
-    // Hidden pair (4,9) in col 7
     this.allSectors.forEach(sector => {
       range(2, 5).forEach(setSize => {
         const numberGroupings = range(1, 10).reduce((numberGroups, num) => {
@@ -257,31 +256,31 @@ class Sudoku {
           return numberGroups
         }, {} as { [key: string]: Cell[] })
         const groupingKeys = Object.keys(numberGroupings)
-        if (groupingKeys.length === setSize) {
-          const groupingSignatures = groupingKeys.map(key =>
-            numberGroupings[key]
-              .map(cell => cell.id)
-              .sort()
-              .join('|'),
-          )
-          if (groupingSignatures.every(signature => signature === groupingSignatures[0])) {
-            numberGroupings[groupingKeys[0]].forEach(cell => {
+
+        getCombinations(groupingKeys, setSize).forEach(keyCombo => {
+          let validCombo = true
+          for (let i = 1; i < setSize; i++) {
+            if (
+              numberGroupings[keyCombo[i]].map(cell => cell.id).join('|') !==
+              numberGroupings[keyCombo[i - 1]].map(cell => cell.id).join('|')
+            ) {
+              validCombo = false
+              break
+            }
+          }
+          if (validCombo) {
+            numberGroupings[keyCombo[0]].forEach(cell => {
               range(1, 10)
-                .filter(n => !groupingKeys.includes(`${n}`))
+                .filter(n => !keyCombo.includes(`${n}`))
                 .forEach(n => cell.marks.delete(n))
             })
           }
-        }
+        })
       })
     })
   }
 
   strategyXWing = () => {
-    // Step 9: X-Wing in cells ( A6 , A9 , I6 , I9 )
-    // The candidate value 6 must be in one of these cells.
-    // Actions:
-    // Candidate 6 removed from cells ( G6, D9, G9 )
-
     range(1, 10).forEach(num => {
       const potentialRows = this.rows
         .map(row => row.filter(cell => cell.marks.has(num)))
@@ -296,9 +295,10 @@ class Sudoku {
           ) {
             const targetColIds = [potentialRows[row1][0].colId, potentialRows[row1][1].colId]
             const sourceRowIds = [potentialRows[row1][0].rowId, potentialRows[row2][0].rowId]
-
             targetColIds.forEach(colId => {
-              this.cols[colId].filter(cell => !sourceRowIds.includes(cell.id)).forEach(cell => cell.marks.delete(num))
+              this.cols[colId]
+                .filter(cell => !sourceRowIds.includes(cell.rowId))
+                .forEach(cell => cell.marks.delete(num))
             })
           }
         })
@@ -319,9 +319,9 @@ class Sudoku {
       this.strategyEliminateSkeweredMarks() // Solves 43
       this.strategyEliminateDoubleSkeweredMarks() // Solves 44
       this.strategyNakedSets() // Solves 48
-      this.strategyHiddenSets() // Solves 48
+      this.strategyHiddenSets() // Solves 49
+      this.strategyXWing() // Solves 50
     } while (this.emptyCount() !== emptyCount || this.marksCount() !== markCount)
-    // this.strategyXWing()
   }
 
   draw = (showMarks: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9]) => {
@@ -411,37 +411,25 @@ class Sudoku {
 }
 
 const solvePuzzles = (puzzles: string[]) =>
-  puzzles.map((puzzle, idx) => {
+  puzzles.map(puzzle => {
     const sudoku = new Sudoku(puzzle)
     sudoku.solve()
-    const unsolvedCellsCount = sudoku.emptyCount()
-    return {
-      idx,
-      solved: unsolvedCellsCount === 0,
-      unsolvedCellsCount,
-      invalid: unsolvedCellsCount === 0 && !sudoku.validateSolution(),
-    }
+    return sudoku
   })
 
 export const solution = () => {
   const rawData = readFileSync(`${__dirname}/sudoku.txt`, 'utf8')
   const sudokuPuzzles = processRawData(rawData)
-
-  const solveAll = false
-  const targetPuzzle = 6
-  const draw = true
-  if (solveAll) {
-    const results = solvePuzzles(sudokuPuzzles)
-    console.log(results.filter(p => p.solved))
-    console.log(results.filter(p => !p.solved))
-    console.log(`Total Solved: ${results.filter(p => p.solved).length}`)
-  } else {
-    const sudoku = new Sudoku(sudokuPuzzles[targetPuzzle])
-    sudoku.solve()
-    if (draw) {
-      sudoku.draw()
-    }
-  }
-
-  return null
+  const results = solvePuzzles(sudokuPuzzles)
+  return results.reduce(
+    (sum, sudoku) =>
+      sum +
+      parseInt(
+        sudoku.cells
+          .slice(0, 3)
+          .map(cell => cell.assignment)
+          .join(''),
+      ),
+    0,
+  )
 }
